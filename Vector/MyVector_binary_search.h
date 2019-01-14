@@ -1,7 +1,7 @@
 #pragma once 
 
 template<class T>
-Rank MyVector<T>::search(T*A, T const &e, Rank lo, Rank hi) const
+Rank MyVector<T>::binSearch(T*A, T const &e, Rank lo, Rank hi) const
 {
 	while(lo<hi) 
 	{
