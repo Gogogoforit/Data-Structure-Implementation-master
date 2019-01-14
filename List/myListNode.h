@@ -1,18 +1,19 @@
 #pragma once
-#define ListNodePosi(T) ListNode<T>*
+#define myListNodePosi(T) myListNode<T>*
 #include "myListNode_insertAsPred.h"
+#include "myListNode_insertAsSucc.h"
 typedef int Rank; 
 
-template <typename T> class ListNode { 
+template <typename T> class myListNode { 
 public:
 	T data;
-	ListNodePosi(T) pred; //pointer to the former one
-	ListNodePosi(T) succ; //pointer to the successive one
+	myListNodePosi(T) pred; //pointer to the former one
+	myListNodePosi(T) succ; //pointer to the successive one
 	
-	ListNode(){}
-	ListNode(T e, ListNodePosi(T) p = NULL, ListNodePosi(T) s = NULL): 
+	myListNode(){}
+	myListNode(T e, myListNodePosi(T) p = NULL, myListNodePosi(T) s = NULL): 
 	data(e),pred(p),succ(s){}
 	
-	ListNodePosi(T) insertAsPred( T const &e);
-	ListNodePosi(T) insertAsSucee( T const &e);
+	myListNodePosi(T) insertAsPred( T const &e);
+	myListNodePosi(T) insertAsSucee( T const &e);
 }
