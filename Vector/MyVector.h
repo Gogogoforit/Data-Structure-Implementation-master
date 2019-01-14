@@ -13,6 +13,14 @@ protected:
 	void expand(); //increase capacity
 	void copyForConstructor(T const *A, Rank lo, Rank hi);
 	
+		
+	//sort algorithms
+	void bubbleSort(Rank lo, Rank hi);
+	void selectionSort(Rank lo, Rank hi);
+	void mergeSort(Rank lo, Rank hi);
+	void quickSort(Rank lo, Rank hi);
+	void heapSort(Rank lo, Rank hi);
+	
 public:
 	//Constructor
 	MyVector(int s=0;T v =0): _size(s),_capacity(DEFAULT_CAPACITY)
@@ -38,13 +46,6 @@ public:
 	{
 		copyForConstructor(A, lo, hi);
 	}
-	
-	
-	//sort algorithms
-	void bubbleSort(Rank lo, Rank hi);
-	void selectionSort(Rank lo, Rank hi);
-	void mergeSort(Rank lo, Rank hi);
-	void quickSort(Rank lo, Rank hi);
 	
 	//Destructor
 	~MyVector()
